@@ -1,0 +1,41 @@
+.container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 2s;
+}
+
+.searh__results {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: var(--title-size-1);
+  font-weight: var(--headline-weight);
+  color: var(--grey-100);
+}
+
+h1 > span {
+  font-size: var(--title-size-1);
+  font-weight: var(--headline-weight);
+  color: var(--grey-50);
+}
+
+@media (min-width: 768px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    transition: 2s;
+  }
+}
