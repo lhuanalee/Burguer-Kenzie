@@ -48,7 +48,7 @@ export const LoginStyle = styled.div`
 
             text-align: center;
     
-            .loginTitle {
+            h4 {
                 width: 100%;
 
                 font-size: var(--title-size-3);
@@ -77,6 +77,15 @@ export const LoginStyle = styled.div`
 
                 color: var(--grey-5);
                 background-color: var(--grey-1);
+
+                &:hover {
+                    background-color: var();
+
+                    color: var(--grey-1);
+                    background-color: var(--grey-5);
+
+                    transition: 1s;
+                }
             }
         }
     }
