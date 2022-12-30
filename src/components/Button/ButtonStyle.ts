@@ -13,4 +13,10 @@ export const ButtonStyle = styled.button`
     background-color: var(--color-brad);
 
     cursor: pointer;
+
+    &:hover {
+        background-color: var(--color-primary);
+
+        transition: 1s;
+    }
 `

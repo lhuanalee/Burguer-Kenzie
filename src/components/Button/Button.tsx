@@ -3,8 +3,8 @@ import { ReactNode } from "react";
 import { ButtonStyle } from "./ButtonStyle";
 
 interface iButtonProps {
-    children: ReactNode;
     className: string,
+    children: ReactNode;
 }
 
 const Button = ({ className, children }: iButtonProps) => {
