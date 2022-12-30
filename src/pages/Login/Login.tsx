@@ -3,6 +3,7 @@ import Ellipse from "../../assets/Ellipse.png";
 
 import { LoginStyle } from "./LoginStyle";
 import Input from "../../components/Input/Input";
+import Button from "../../components/Button/Button";
 
 const Login = () => {
     return (
@@ -13,12 +14,12 @@ const Login = () => {
             </div>
             <div className="form">
                 <form>
-                    <h4>Login</h4>
+                    <h4 className="loginTitle">Login</h4>
                     <Input type="text" children="Nome"/>
                     <Input type="text" children="Senha"/>
-                    <button className="login">Logar</button>
+                    <Button className="login">Logar</Button>
                     <span>Crie sua conta para saborear muitas delícias e matar sua fome!</span>
-                    <button className="register">Cadastrar</button>
+                    <Button className="register">Cadastrar</Button>
                 </form>
             </div>
         </LoginStyle>

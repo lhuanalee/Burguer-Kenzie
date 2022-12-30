@@ -48,7 +48,7 @@ export const LoginStyle = styled.div`
 
             text-align: center;
     
-            h4 {
+            .loginTitle {
                 width: 100%;
 
                 font-size: var(--title-size-3);
@@ -61,17 +61,6 @@ export const LoginStyle = styled.div`
     
             .login {
                 width: 100%;
-    
-                padding: 17px 0;
-    
-                border: 1px solid transparent;
-                border-radius: 8px;
-
-                font-size: var(--headline-size);
-                font-weight: var(--body-weight-2);
-    
-                color: var(--white);
-                background-color: var(--color-brad);
             }
 
             span {
@@ -85,14 +74,6 @@ export const LoginStyle = styled.div`
 
             .register {
                 width: 100%;
-    
-                padding: 17px 0;
-    
-                border: 1px solid transparent;
-                border-radius: 8px;
-
-                font-size: var(--headline-size);
-                font-weight: var(--body-weight-2);
 
                 color: var(--grey-5);
                 background-color: var(--grey-1);
