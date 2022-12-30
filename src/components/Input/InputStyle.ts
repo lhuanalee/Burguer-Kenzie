@@ -10,14 +10,14 @@ export const InputStyle = styled.div`
 
         padding: 15px;
 
-        border: 2px solid var(--grey-4);
+        border: 2px solid var(--color-brad);
         border-radius: 8px;
 
         font-size: var(--headline-size);
         font-weight: var(--caption-weight);
 
         color: var(--grey-4);
-        background: transparent;
+        background: var(--grey-1);
 
         outline: none;
     }
@@ -41,6 +41,11 @@ export const InputStyle = styled.div`
         transition: 0.5s;
     }
 
+    input:valid, 
+    input:focus {
+        background: var(--white);
+    }
+
     input:valid ~ label, 
     input:focus ~ label {
         padding: 0 10px;
@@ -56,10 +61,5 @@ export const InputStyle = styled.div`
         background: white;
 
         transform: translateX(10px) translateY(-5px);
-    }
-
-    input:valid, 
-    input:focus {
-        border: 2px solid var(--color-brad);
     }
 `

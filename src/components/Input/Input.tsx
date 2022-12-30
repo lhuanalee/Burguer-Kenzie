@@ -10,8 +10,8 @@ interface iInputProps {
 const Input = ({ type, children }: iInputProps) => {
     return (
         <InputStyle>
-            <input type={type} placeholder="" required={true}/>
-            <label htmlFor="">{children}</label>
+            <input type={type} autoComplete="off" required={true} placeholder=""/>
+            <label>{children}</label>
         </InputStyle>
     );
 };
