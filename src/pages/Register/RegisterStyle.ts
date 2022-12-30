@@ -21,31 +21,6 @@ export const RegisterStyle = styled.div`
         }
     }
 
-    .registerHeader {
-        width: 100%;
-
-        display: flex;
-        justify-content: space-between;
-
-        .registerTitle {
-            width: 0;
-
-            font-size: var(--title-size-3);
-            font-weight: var(--headline-weight);
-
-            color: var(--color-brad);
-        }
-
-        p {
-            font-size: var(--body-size-1);
-            font-weight: var(--body-weight-1);
-
-            text-decoration: underline;
-
-            color: var(--grey-3);
-        }
-    }
-
     .form {
         width: 100%;
 
@@ -69,17 +44,31 @@ export const RegisterStyle = styled.div`
             gap: 20px;
 
             text-align: center;
-    
-            h4 {
+
+            .registerHeader {
                 width: 100%;
 
-                font-size: var(--title-size-3);
-                font-weight: var(--headline-weight);
+                display: flex;
+                justify-content: space-between;
 
-                color: var(--color-brad);
-    
-                text-align: left;
-            }        
+                h4 {
+                    width: 0;
+
+                    font-size: var(--title-size-3);
+                    font-weight: var(--headline-weight);
+
+                    color: var(--color-brad);
+                }
+
+                a {
+                    font-size: var(--body-size-1);
+                    font-weight: var(--body-weight-1);
+
+                    text-decoration: underline;
+
+                    color: var(--grey-3);
+                }
+            }
 
             button {
                 width: 100%;

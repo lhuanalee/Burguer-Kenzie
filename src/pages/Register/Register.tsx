@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 import Logo from "../../components/Logo/Logo";
 
 import Ellipse from "../../assets/Ellipse.png"
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
+
 import { RegisterStyle } from "./RegisterStyle";
 
 const Register = () => {
@@ -15,8 +18,8 @@ const Register = () => {
             <div className="form">
                 <form>
                     <div className="registerHeader">
-                        <h4 className="registerTitle">Cadastro</h4>
-                        <p>Retornar para o login</p>
+                        <h4>Cadastro</h4>
+                        <Link to="/">Retornar para o login</Link>
                     </div>
                     <Input type="text" children="Nome"/>
                     <Input type="email" children="Email"/>
