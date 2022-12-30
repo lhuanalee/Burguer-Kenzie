@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
 
     font-style: none;
     font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    
     list-style: none;
 }
 
@@ -33,7 +35,7 @@ body {
 :root {
     /* Colors */
     --color-brad: #27AE60;
-    --color-primary: #93D7AF;
+    --color-primary: #0F7A3B;
     --color-secundary: #EB5757;
     --color-background: rgba(39, 174, 96, 0.1);
     --color-negative: #E60000;
@@ -42,7 +44,7 @@ body {
     --grey-3: #828282;
     --grey-4: #333333;
     --grey-5: #999999;
-    --white: #ffffff;
+    --white: #FFFFFF;
     --black: #000000;
 
     /* Font-family */
