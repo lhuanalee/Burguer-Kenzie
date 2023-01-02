@@ -1,5 +1,7 @@
 import { Dispatch, ReactNode, SetStateAction } from "react";
 
+import { iProductList } from "../ProductContext/types";
+
 export interface iCartProps {
   children: ReactNode;
 }
@@ -10,12 +12,14 @@ export interface iCartProducts {
   category: string;
   price: number;
   img: string;
-  quantity?: any;
+  quantity?: number;
 }
 
 export interface iCartValue {
-  currentCart: iCartProducts[];
-  setCurrentCart: Dispatch<SetStateAction<iCartProducts[]>>;
+  currentCart: iCartProducts[] | iProductList[];
+  setCurrentCart: (
+    value: React.SetStateAction<iCartProducts[] | iProductList[]>
+  ) => void;
   click: boolean;
   setClick: Dispatch<SetStateAction<boolean>>;
 }
