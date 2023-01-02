@@ -34,6 +34,8 @@ export const CartStyle = styled.div`
   }
 
   .shoppingCart {
+    width: 100%;
+
     padding: 18px;
 
     display: flex;
@@ -67,6 +69,7 @@ export const CartStyle = styled.div`
     align-items: center;
     gap: 10px;
 
+    border: 1px solid transparent;
     border-radius: 0 0 5px 5px;
 
     background-color: var(--grey-0);
@@ -75,13 +78,13 @@ export const CartStyle = styled.div`
       width: 100%;
       height: 350px;
 
-      padding: 20px 0;
+      padding: 20px 5px;
 
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      gap: 10px;
+      gap: 5px;
 
       background-color: var(--grey-0);
 
@@ -115,7 +118,7 @@ export const CartStyle = styled.div`
       background-color: var(--grey-20);
     }
 
-    p {
+    .emptyBag {
       margin-top: 50px;
       padding: 0;
 

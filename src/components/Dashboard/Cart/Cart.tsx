@@ -31,7 +31,7 @@ const Cart = () => {
           </div>
         ) : (
           <div className="emptyCart">
-            <p>Sua sacola está vazia</p>
+            <p className="emptyBag">Sua sacola está vazia</p>
             <span>Adicione itens</span>
             <img src={AstronautCat} alt="" />
           </div>
