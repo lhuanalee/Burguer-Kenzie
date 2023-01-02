@@ -37,6 +37,7 @@ body {
     --color-secundary: #EB5757;
     --color-background: rgba(39, 174, 96, 0.1);
     --color-negative: #E60000;
+    --color-negative-hover: #B10000;
     --grey-1: #F5F5F5;
     --grey-2: #E0E0E0;
     --grey-3: #828282;
