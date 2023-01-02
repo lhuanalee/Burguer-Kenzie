@@ -10,6 +10,7 @@ export interface iProductList {
   category: string;
   price: number;
   img: string;
+  quantity?: number;
 }
 
 export interface iProductsValue {
