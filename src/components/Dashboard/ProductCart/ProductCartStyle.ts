@@ -10,6 +10,9 @@ export const ProductCartStyle = styled.li`
   align-items: center;
   gap: 10px;
 
+  border: 1px solid transparent;
+  border-radius: 5px;
+
   background-color: var(--white);
 
   .product {
@@ -17,6 +20,7 @@ export const ProductCartStyle = styled.li`
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    gap: 8px;
 
     figure {
       width: 70px;
@@ -35,13 +39,13 @@ export const ProductCartStyle = styled.li`
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      gap: 10px;
+      gap: 15px;
 
       p {
         font-size: var(--headline-size);
-        font-weight: var(--title-weight-4);
+        font-weight: var(--headline-weight);
         padding: 0;
-        max-width: 8ch;
+        max-width: 9ch;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -49,9 +53,10 @@ export const ProductCartStyle = styled.li`
       }
 
       span {
-        font-size: var(--body-size);
-        font-weight: var(--caption-weight);
-        color: var(--grey-50);
+        font-size: var(--body-size-1);
+        font-weight: var(--body-weight-1);
+
+        color: var(--grey-3);
       }
     }
   }
@@ -63,6 +68,7 @@ export const ProductCartStyle = styled.li`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
   }
 
   .buttonCartCounter {
@@ -70,9 +76,10 @@ export const ProductCartStyle = styled.li`
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 
-    button {
+    .buttonIncreaseProduct {
       width: 25px;
       height: 25px;
 
@@ -82,13 +89,26 @@ export const ProductCartStyle = styled.li`
       justify-content: center;
       align-items: center;
 
-      border: 1px solid transparent;
+      border-radius: 2px;
+    }
+
+    .buttonDecreaseProduct {
+      width: 25px;
+      height: 25px;
+
+      padding: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       border-radius: 2px;
 
-      color: var(--white);
-      background-color: var(--color-primary);
+      background-color: var(--color-negative);
 
-      cursor: pointer;
+      &:hover {
+        background-color: var(--color-negative-hover);
+      }
     }
 
     p {
@@ -104,13 +124,15 @@ export const ProductCartStyle = styled.li`
   .buttonCartRemove {
     width: max-content;
 
+    padding: 0;
+
     border: none;
 
-    color: var(--grey-50);
-    background-color: transparent;
+    font-size: var(--body-size-1);
+    font-weight: var(--body-weight-1);
 
-    font-size: var(--body-size);
-    font-weight: var(--body-weight);
+    color: var(--grey-3);
+    background-color: transparent;
 
     cursor: pointer;
   }

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../../contexts/CartContext/CartContext";
 import { iCartProducts } from "../../../contexts/CartContext/types";
+import Button from "../../Button/Button";
 
 import { ProductCartStyle } from "./ProductCartStyle";
 
@@ -14,7 +15,7 @@ const ProductCart = ({ product }: iProduct) => {
   const increaseProduct = () => {
     const addProduct = currentCart.map((item) =>
       item.id === product.id
-        ? { ...product, quantity: product.quantity + 1 }
+        ? { ...product, quantity: product.quantity! + 1 }
         : item
     );
     setCurrentCart(addProduct);
@@ -26,7 +27,7 @@ const ProductCart = ({ product }: iProduct) => {
     } else {
       const removeProduct = currentCart.map((item) =>
         item.id === product.id
-          ? { ...product, quantity: product.quantity - 1 }
+          ? { ...product, quantity: product.quantity! - 1 }
           : item
       );
       setCurrentCart(removeProduct);
@@ -51,13 +52,17 @@ const ProductCart = ({ product }: iProduct) => {
       </div>
       <div className="buttonCartProduct">
         <div className="buttonCartCounter">
-          <button onClick={increaseProduct}>+</button>
-          <p>{product.price}</p>
-          <button onClick={decreaseProduct}>-</button>
+          <Button className="buttonIncreaseProduct" onClick={increaseProduct}>
+            +
+          </Button>
+          <p>{product.quantity}</p>
+          <Button className="buttonDecreaseProduct" onClick={decreaseProduct}>
+            -
+          </Button>
         </div>
-        <button className="buttonCartRemove" onClick={removeToCart}>
+        <Button className="buttonCartRemove" onClick={removeToCart}>
           Remover
-        </button>
+        </Button>
       </div>
     </ProductCartStyle>
   );
