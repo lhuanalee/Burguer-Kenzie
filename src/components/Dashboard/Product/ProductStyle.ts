@@ -42,7 +42,7 @@ export const ProductStyle = styled.li`
   }
 
   div {
-    margin: 22px 22px 0;
+    margin: 16px 22px 10px;
 
     display: flex;
     flex-direction: column;
@@ -53,21 +53,21 @@ export const ProductStyle = styled.li`
 
     .productName {
       font-size: var(--title-size-3);
-      font-weight: var(--title-weight-3);
+      font-weight: var(--headline-weight);
     }
 
     .productCategory {
-      font-size: var(--caption-size);
+      font-size: var(--body-size-1);
       font-weight: var(--caption-weight);
 
-      color: var(--grey-100);
+      color: var(--grey-3);
     }
 
     .productPrice {
-      font-size: var(--body-size-2);
-      font-weight: var(--title-weight-4);
+      font-size: var(--title-size-3);
+      font-weight: var(--body-weight-2);
 
-      color: var(--color-primary);
+      color: var(--color-brad);
     }
 
     button {

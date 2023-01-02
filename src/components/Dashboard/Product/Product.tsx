@@ -7,32 +7,34 @@ import { ProductContext } from "../../../contexts/ProductContext/ProductContext"
 import Button from "../../Button/Button";
 
 import { ProductStyle } from "./ProductStyle";
+import { iProductList } from "../../../contexts/ProductContext/types";
 
 interface iProduct {
-  product: iCartProducts;
+  product: iCartProducts | iProductList;
 }
 
-interface iAddToCart {
-  id: number;
+interface iProductFound {
+  item: iCartProducts | iProductList;
 }
 
 const Product = ({ product }: iProduct) => {
-  const { currentCart, setCurrentCart } = useContext(CartContext);
   const { productsList } = useContext(ProductContext);
+  const { currentCart, setCurrentCart } = useContext(CartContext);
 
-  //   const addToCart = (id: iAddToCart) => {
-  //     const idFound = currentCart.find((product) => product.id === id);
-  //     if (idFound) {
-  //       const productFound = currentCart.map((product) =>
-  //         product.id === id
-  //           ? { ...product, quantity: product.quantity + 1 }
-  //           : product
-  //       );
-  //       setCurrentCart(productFound);
-  //     } else {
-  //       const productFound = productsList.find((product) => product.id === id);
-  //       setCurrentCart([...currentCart, { ...productFound, quantity: 1 }]);
-  //     }
+  const addToCart = (id: number) => {
+    const idFound = currentCart.find((product) => product.id === id);
+    if (idFound) {
+      const productFound = currentCart.map((product) =>
+        product.id === id
+          ? { ...product, quantity: product.quantity! + 1 }
+          : product
+      );
+      setCurrentCart(productFound);
+    } else {
+      productsList.find((item) => item.id === id);
+      setCurrentCart([...currentCart, { ...product, quantity: 1 }]);
+    }
+  };
 
   return (
     <ProductStyle>
@@ -48,7 +50,7 @@ const Product = ({ product }: iProduct) => {
             currency: "BRL",
           })}
         </p>
-        <Button>Adicionar</Button>
+        <Button onClick={() => addToCart(product.id)}>Adicionar</Button>
       </div>
     </ProductStyle>
   );
