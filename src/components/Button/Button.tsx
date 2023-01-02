@@ -3,14 +3,18 @@ import { ReactNode } from "react";
 import { ButtonStyle } from "./ButtonStyle";
 
 interface iButtonProps {
-    className: string,
-    children: ReactNode;
+  type?: "button" | "submit" | "reset";
+  className?: string;
+  onClick?: () => void;
+  children: ReactNode;
 }
 
-const Button = ({ className, children }: iButtonProps) => {
-    return (
-        <ButtonStyle className={className}>{children}</ButtonStyle>
-    );
+const Button = ({ type, className, onClick, children }: iButtonProps) => {
+  return (
+    <ButtonStyle type={type} className={className} onClick={onClick}>
+      {children}
+    </ButtonStyle>
+  );
 };
 
 export default Button;
