@@ -1,19 +1,20 @@
-import { ReactNode } from "react";
+import { InputHTMLAttributes, forwardRef } from "react";
 
 import { InputStyle } from "./InputStyle";
 
-interface iInputProps {
-    type: string,
-    children: ReactNode;
+interface iInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  label: string;
 }
 
-const Input = ({ type, children }: iInputProps) => {
+const Input = forwardRef<HTMLInputElement, iInputProps>(
+  ({ label, id, ...rest }, ref) => {
     return (
-        <InputStyle>
-            <input type={type} autoComplete="off" required={true} placeholder=""/>
-            <label>{children}</label>
-        </InputStyle>
+      <InputStyle>
+        <input required={true} id={id} ref={ref} {...rest} />
+        <label>{label}</label>
+      </InputStyle>
     );
-};
+  }
+);
 
 export default Input;

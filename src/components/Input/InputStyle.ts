@@ -1,65 +1,65 @@
 import styled from "styled-components";
 
 export const InputStyle = styled.div`
+  width: 100%;
+
+  position: relative;
+
+  input {
     width: 100%;
 
-    position: relative;
+    padding: 15px;
 
-    input {
-        width: 100%;
+    border: 2px solid var(--color-brad);
+    border-radius: 8px;
 
-        padding: 15px;
+    font-size: var(--headline-size);
+    font-weight: var(--caption-weight);
 
-        border: 2px solid var(--color-brad);
-        border-radius: 8px;
+    color: var(--grey-4);
+    background: var(--grey-1);
 
-        font-size: var(--headline-size);
-        font-weight: var(--caption-weight);
+    outline: none;
+  }
 
-        color: var(--grey-4);
-        background: var(--grey-1);
+  label {
+    padding: 17px;
 
-        outline: none;
-    }
+    position: absolute;
+    left: 0;
 
-    label {
-        padding: 17px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 
-        position: absolute;
-        left: 0;
+    font-size: var(--headline-size);
+    font-weight: var(--caption-weight);
 
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent;
+    color: var(--grey-3);
 
-        font-size: var(--headline-size);
-        font-weight: var(--caption-weight);
+    pointer-events: none;
 
-        color: var(--grey-3);
+    transition: 0.5s;
+  }
 
-        pointer-events: none;
+  input:valid,
+  input:focus {
+    background: var(--white);
+  }
 
-        transition: 0.5s;
-    }
+  input:valid ~ label,
+  input:focus ~ label {
+    padding: 0 10px;
 
-    input:valid, 
-    input:focus {
-        background: var(--white);
-    }
+    border-left: 1px solid var(--color-brad);
+    border-right: 1px solid var(--color-brad);
 
-    input:valid ~ label, 
-    input:focus ~ label {
-        padding: 0 10px;
+    font-size: 0.65em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 
-        border-left: 1px solid var(--color-brad);
-        border-right: 1px solid var(--color-brad);
-        
-        font-size: 0.65em;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        
-        color: var(--color-brad);
-        background: white;
+    color: var(--color-brad);
+    background: white;
 
-        transform: translateX(10px) translateY(-5px);
-    }
-`
+    transform: translateX(10px) translateY(-5px);
+  }
+`;
