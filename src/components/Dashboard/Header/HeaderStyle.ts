@@ -16,7 +16,7 @@ export const HeaderStyle = styled.header`
     align-items: center;
 
     .logo {
-      width: 150px;
+      width: 140px;
       height: 36px;
     }
 
