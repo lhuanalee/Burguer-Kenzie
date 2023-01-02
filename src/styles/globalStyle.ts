@@ -16,16 +16,14 @@ const GlobalStyle = createGlobalStyle`
 
 body {   
     max-width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
 
     font-family: 'Inter', sans-serif;
 }
 
 .App {
-    max-width: 100%;
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
-    height: 100%;
 
     background: linear-gradient(rgba(0, 0, 0, 1.0), rgba(00, 128, 00, 0.8)), url("https://curitibacult.com.br/wp-content/uploads/2022/09/mc-donalds-copa-do-mundo.jpg") no-repeat center;
     background-size: cover;
@@ -59,7 +57,6 @@ body {
     --caption-size: 12px;
     
     /* Font-weight */
-    
     --title-weight-1: bold;
     --headline-weight: 700;
     --body-weight-1: 500;
@@ -67,4 +64,5 @@ body {
     --caption-weight: 400;
 }
 `;
+
 export default GlobalStyle;
