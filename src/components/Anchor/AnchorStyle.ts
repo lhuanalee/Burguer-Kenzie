@@ -3,22 +3,22 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const AnchorStyle = styled(Link)`
-    padding: 17px 0;
-    
-    border: 1px solid transparent;
-    border-radius: 8px;
+  padding: 17px 0;
 
-    font-size: var(--headline-size);
-    font-weight: var(--body-weight-2);
+  border: 1px solid transparent;
+  border-radius: 8px;
 
-    color: var(--white);
-    background-color: var(--color-brad);
+  font-size: var(--headline-size);
+  font-weight: var(--body-weight-2);
 
-    cursor: pointer;
+  color: var(--white);
+  background-color: var(--color-brad);
 
-    &:hover {
-        background-color: var(--color-primary);
+  cursor: pointer;
 
-        transition: 1s;
-    }
-`
+  &:hover {
+    background-color: var(--color-primary);
+
+    transition: 1s;
+  }
+`;
