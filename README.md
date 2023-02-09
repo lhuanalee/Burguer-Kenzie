@@ -1,1 +1,3 @@
-# react-entrega-hamburgueria-v2
+O Burguer Kenzie é uma aplicação desenvolvida em React que simula o site de uma hamburgueria, onde o usuário pode adicionar e remover itens do carrinho, além de conseguir visualizar um contador que monitora a quantidade de produtos adicionados e atualiza o total do valor em tempo real. Para a formação desse projeto foi realizada a componetização de alguns elementos, a estilização por meio do Styled Components, a utilização do useState para controlar o estado de alguns componenetes, o useEffect para a visualização da lista de produtos e o uso do Axios para realizar a requisição de busca na API.
+
+Link do projeto: https://react-entrega-s1-hamburgueria-da-kenzie-lhuanalee.vercel.app/
